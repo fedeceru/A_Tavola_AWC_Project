@@ -1,0 +1,117 @@
+body {
+    background-color: #f0f8ff; /* Light aqua background */
+}
+.navbar {
+    background-color: #20B2AA; /* Light sea green */
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.navbar-brand img {
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #e0ffff; /* Light cyan */
+}
+.btn-custom-outline-purple {
+    color: white;
+    border-color: white;
+    background-color: transparent;
+}
+.btn-custom-outline-purple:hover {
+    color: #20B2AA;
+    background-color: white;
+    border-color: white;
+}
+.category-item {
+    transition: all 0.3s ease;
+    background-color: #5F9EA0; /* Cadet blue */
+    color: white;
+    border: none;
+}
+.category-item:hover {
+    transform: translateY(-5px);
+    background-color: #20B2AA;
+}
+.card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #E0FFFF; /* Light cyan */
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.carousel-item img {
+    object-fit: cover;
+    height: 400px;
+}
+.btn-primary {
+    background-color: #20B2AA;
+    border-color: #20B2AA;
+}
+.btn-primary:hover {
+    background-color: #5F9EA0;
+    border-color: #5F9EA0;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(32, 178, 170, 0.7);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.carousel-control-prev {
+    left: 320px;
+}
+
+.carousel-control-next {
+    right: 320px;
+}
+
+#carosell {
+    position: relative;
+}
+
+.site-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.8rem; /* Dimensione del titolo */
+    font-weight: 600;
+    color: #ffffff; /* Verde scuro per il contrasto */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.site-title:hover {
+    color: #5F9EA0; 
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.site-subtitle {
+    font-size: 1.1rem; 
+    font-weight: 400;
+    color: #ffffff; 
+    margin-bottom: 0;
+}
+
+

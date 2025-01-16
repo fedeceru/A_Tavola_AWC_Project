@@ -1,0 +1,244 @@
+/* Global Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f8ff; /* Light aqua background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #20B2AA; /* Light sea green */
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.navbar-brand img {
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    margin-left: 50px;
+    transition: transform 0.3s, filter 0.3s; /* Aggiungi la transizione */
+}
+/* Effetto hover sul logo */
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Ingrandisce il logo */
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.3)); /* Aggiungi un'ombra più evidente */
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #e0ffff; /* Light cyan */
+}
+
+/* Navbar Buttons (Sign up and Login) */
+.navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e0ffff; 
+}
+
+/* Pulsanti "Sign up" e "Login" */
+.navbar-nav .nav-item a {
+    background-color: transparent;
+    border: none;
+    color: white !important; 
+    padding: 8px 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-item a:hover {
+    color: #e0ffff; 
+}
+
+/* Main Section Styles */
+main {
+    margin-top: 40px;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Aggiunge profondità alla sezione */
+}
+
+/* Title Styles */
+h1, h4 {
+    color: #20B2AA; /* Green shade for headings */
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Recipe Image */
+#recipe-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for contrast */
+}
+
+/* Ingredients List */
+#recipe-ingredients .list-group-item {
+    font-size: 1.1rem;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+}
+
+/* Instructions */
+#recipe-instructions {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Custom Buttons */
+.btn-custom-outline-purple {
+    color: white;
+    border-color: white;
+    background-color: transparent;
+}
+
+.btn-custom-outline-purple:hover {
+    color: #20B2AA;
+    background-color: white;
+    border-color: white;
+}
+
+/* Category Item */
+.category-item {
+    transition: all 0.3s ease;
+    background-color: #5F9EA0; /* Cadet blue */
+    color: white;
+    border: none;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+    background-color: #20B2AA;
+}
+
+/* Card Styles */
+.card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #E0FFFF; /* Light cyan */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Styles */
+.btn-primary {
+    margin-top: 10px;
+    background-color: #20B2AA;
+    border-color: #20B2AA;
+}
+
+.btn-secondary {
+    background-color: #20B2AA;
+    border-color: #20B2AA;
+}
+
+.btn-primary:hover {
+    background-color: #5F9EA0;
+    border-color: #5F9EA0;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(32, 178, 170, 0.7);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.carousel-control-prev {
+    left: 350px;
+}
+
+.carousel-control-next {
+    right: 350px;
+}
+
+#carosello {
+    position: relative;
+}
+
+/* Stelle di recensione (sia per la visualizzazione che per l'inserimento) */
+.review-stars i {
+    font-size: 1.5rem;  /* Impostiamo la dimensione delle stelle */
+    color: #d3d3d3;     /* Colore grigio per stelle non selezionate */
+    cursor: pointer;   /* Cambia il cursore quando si passa sopra le stelle */
+    transition: color 0.3s ease;  /* Transizione dolce per il cambio di colore */
+}
+
+/* Stelle selezionate (ciano) */
+.review-stars i.selected {
+    color: #20B2AA;  /* Colore ciano per le stelle selezionate */
+}
+
+/* Quando l'utente passa sopra una stella (hover) */
+.review-stars i:hover,
+.review-stars i:hover ~ i {
+    color: #20B2AA;  /* Colore ciano quando hover */
+}
+
+/* Stelle per la visualizzazione delle recensioni (ciano) */
+.review-stars span {
+    color: #20B2AA; /* Colore ciano per le stelle già selezionate nella recensione */
+}
+
+/* Stelle delle recensioni già inviate (color ciano) */
+.review-stars {
+    color: #20B2AA;  /* Colore ciano per le stelle delle recensioni già inviate */
+}
+
+/* Stile per il pulsante "Elimina recensione" */
+.delete-review-btn {
+    background-color: #ff6347;  /* Colore rosso chiaro */
+    color: white;               /* Testo bianco */
+    border: none;               /* Nessun bordo */
+    padding: 8px 16px;          /* Spaziatura interna */
+    font-weight: 500;           /* Grassetto per il testo */
+    border-radius: 5px;         /* Bordo arrotondato */
+    cursor: pointer;           /* Cambia il cursore quando si passa sopra */
+    transition: background-color 0.3s ease, color 0.3s ease;  /* Transizione dolce */
+}
+
+.delete-review-btn:hover {
+    background-color: #ff4500;  /* Colore più scuro al passaggio del mouse */
+    color: white;               /* Testo bianco al passaggio del mouse */
+}

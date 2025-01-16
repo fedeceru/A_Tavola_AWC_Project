@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="recipeBook.css" rel="stylesheet">
+</head>
+<body>
+     <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light mx-2 flex-column">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <!-- Logo -->
+            <a class="navbar-brand" id="logo" href="homePage.html">
+                <img src="logoIcon.png" alt="A Tavola!" width="60" height="60">
+            </a>
+            
+            <!-- Registrati e Accedi -->
+            <div class="d-flex justify-content-end align-items-center">
+                <ul class="navbar-nav mb-2 mb-lg-0 fs-3 d-flex flex-row align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active d-flex align-items-center" href="register.html" id="register">
+                            <i class="bi bi-person-plus me-2"></i>Sign up
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ms-3 d-flex align-items-center" href="login.html" id="login">
+                            <i class="bi bi-box-arrow-in-right me-2"></i>Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <h1> Saved Recipes</h1>
+        <div class="row" id="saved-recipes-container">
+            <!-- Le ricette salvate verranno visualizzate qui -->
+        </div>
+    </main>
+
+    <script src="recipeBook.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

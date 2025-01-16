@@ -1,0 +1,98 @@
+body {
+    background-color: #f0f8ff; /* Light aqua background */
+}
+/* Stile per il titolo principale */
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #20B2AA; /* Verde acqua */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Stile per logo */
+.navbar {
+    background-color: #20B2AA; /* Verde acqua chiaro */
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.navbar-brand img {
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    margin-left: 50px;
+    transition: transform 0.3s, filter 0.3s; /* Aggiungi la transizione */
+}
+/* Effetto hover sul logo */
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Ingrandisce il logo */
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.3)); /* Aggiungi un'ombra più evidente */
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #e0ffff; /* Ciano chiaro */
+}
+
+/* Contenitore delle ricette salvate */
+#saved-recipes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Stile per ogni card di ricetta */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+/* Stile per il corpo della card */
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #20B2AA; /* Verde acqua */
+}
+
+.card-title:hover {
+    text-decoration: underline;
+}
+
+/* Bottone per visualizzare la ricetta */
+.btn-primary {
+    background-color: #20B2AA; /* Verde acqua */
+    border-color: #20B2AA; /* Verde acqua */
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #00ced1; /* Ciano */
+    border-color: #00ced1; /* Ciano */
+}

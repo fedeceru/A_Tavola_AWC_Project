@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - A Tavola!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="register.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Contenitore principale del modulo di registrazione -->
+    <div class="register-container">
+        <!-- Card che racchiude il modulo -->
+        <div class="card">
+            <div class="card-header text-center">
+                <!-- Titolo della sezione di registrazione -->
+                <h2 class="mb-0">Sign Up to A Tavola!</h2>
+            </div>
+            <div class="card-body p-4">
+                <!-- Inizio del modulo per la registrazione dell'utente -->
+                <form id="signUpForm">
+                    <!-- Campo per il nome -->
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">Name</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-person"></i></span>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required placeholder="Enter your name">
+                        </div>
+                    </div>
+                    <!-- Campo per il cognome -->
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Surname</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-person"></i></span>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required placeholder="Enter your surname">
+                        </div>
+                    </div>
+                    <!-- Campo per l'email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                            <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                    </div>
+                    <!-- Campo per la password -->
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                            <input type="password" class="form-control" id="password" name="password" required placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <!-- Campo per la conferma della password -->
+                    <div class="mb-3">
+                        <label for="confPassword" class="form-label">Confirm Password</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                            <input type="password" class="form-control" id="confPassword" name="confPassword" required placeholder="Confirm your password">
+                        </div>
+                    </div>
+                    <!-- Pulsante per inviare il modulo -->
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Sign Up</button>
+                </form>
+                <!-- Link per l'accesso se l'utente ha già un account -->
+                <div class="text-center mt-3">
+                    <p class="mb-0">Already have an account? <a href="login.html">Login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Inclusione delle librerie JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>
