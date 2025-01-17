@@ -33,3 +33,15 @@ body {
     border-color: #20B2AA;
     box-shadow: 0 0 0 0.2rem rgba(32, 178, 170, 0.25);
 }
+/* Stile per il logo */
+#logo img.logo-icon {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#logo img.logo-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+#logo {
+    align-self: center;
+}

@@ -29,7 +29,7 @@ function checkLoginStatus() {
         modprofileIcon.classList.add('bi', 'bi-person', 'me-2');
 
         modprofileLink.appendChild(modprofileIcon);
-        modprofileLink.appendChild(document.createTextNode('Yourself'));
+        modprofileLink.appendChild(document.createTextNode('Profile'));
         editProfile.appendChild(modprofileLink);
 
         const profileItem = document.createElement('li');

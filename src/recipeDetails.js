@@ -27,7 +27,7 @@ function checkIfUserLoggedIn() {
         editrecipeBookIcon.classList.add('bi', 'bi-person', 'me-2');
 
         editProfileLink.appendChild(editrecipeBookIcon);
-        editProfileLink.appendChild(document.createTextNode('Yourself'));
+        editProfileLink.appendChild(document.createTextNode('Profile'));
         editProfile.appendChild(editProfileLink);
 
         // 2) Link "Recipe book" per visualizzare il libro delle ricette
