@@ -71,7 +71,7 @@ function checkLoginStatus() {
         // Listener per il logout
         logoutLink.addEventListener('click', function(event) {
             event.preventDefault();
-            localStorage.removeItem('isLoggedIn');
+            localStorage.setItem('isLoggedIn', 'false');
             localStorage.removeItem('loggedInUser');
             alert('Sei stato scollegato con successo!');
             location.reload();

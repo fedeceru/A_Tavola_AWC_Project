@@ -54,15 +54,16 @@ document.addEventListener('DOMContentLoaded', function () {
             var users = JSON.parse(localStorage.getItem('users')) || [];
             var updatedUsers = users.filter(user => user.email !== loggedInUser.email);
 
-            // Se non ci sono più utenti, elimino la chiave 'users' dal localStorage
+            // Se non ci sono più utenti registrati, elimino anche la chiave 'users' e 'isLoggedIn'
             if (updatedUsers.length === 0) {
                 localStorage.removeItem('users');
+                localStorage.removeItem('isLoggedIn');
             } else {
                 localStorage.setItem('users', JSON.stringify(updatedUsers));
+                localStorage.setItem('isLoggedIn', 'false');
             }
 
             localStorage.removeItem('loggedInUser');
-            localStorage.removeItem('isLoggedIn');
 
             // Elimino le recensioni associate all'utente
             var reviewKeys = Object.keys(localStorage).filter(key => key.endsWith('_reviews'));
