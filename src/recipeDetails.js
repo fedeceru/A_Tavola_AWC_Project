@@ -139,8 +139,8 @@ function saveRecipe() {
     const recipeImg = document.getElementById('recipe-img').src;
 
     // Ottieni le ricette salvate dall'utente loggato
-    const loggedInUser = localStorage.getItem('loggedInUser');
-    const savedRecipesKey = `${loggedInUser}_savedRecipes`;  // Corretto l'uso delle variabili nel nome della chiave
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    const savedRecipesKey = `${loggedInUser.email}_savedRecipes`;  // Corretto l'uso delle variabili nel nome della chiave
     const savedRecipes = JSON.parse(localStorage.getItem(savedRecipesKey)) || [];
 
     // Controlla se la ricetta è già stata salvata
@@ -336,6 +336,12 @@ function saveNote() {
     }
 
     const note = document.getElementById('recipe-note').value;
+
+    // Controllo se la nota è vuota
+    if (!note.trim()) {
+        alert('Please write a note before saving.');
+        return;
+    }
 
     // Salva la nota associata all'utente loggato e alla ricetta corrente
     const noteKey = `${loggedInUser.email}_${recipeId}_note`;

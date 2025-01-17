@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var password = document.getElementById('password').value;
         var confirmPassword = document.getElementById('confPassword').value;
 
+        // Controllo che le password corrispondano
         if (password && (password !== confirmPassword)) {
             alert('Passwords do not match.');
             return;
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loggedInUser.firstName = firstName;
         loggedInUser.lastName = lastName;
 
+        // Controllo della password (se presente)
         if (password) {
             if (password.length < 8 || !/\d/.test(password) || !/[A-Z]/.test(password)) {
                 alert('Password must be at least 8 characters long and contain at least one number and one uppercase letter.');
@@ -52,10 +54,15 @@ document.addEventListener('DOMContentLoaded', function () {
             var users = JSON.parse(localStorage.getItem('users')) || [];
             var updatedUsers = users.filter(user => user.email !== loggedInUser.email);
 
-            // Rimuovo l'utente dal localStorage
-            localStorage.setItem('users', JSON.stringify(updatedUsers));
+            // Se non ci sono più utenti, elimino la chiave 'users' dal localStorage
+            if (updatedUsers.length === 0) {
+                localStorage.removeItem('users');
+            } else {
+                localStorage.setItem('users', JSON.stringify(updatedUsers));
+            }
+
             localStorage.removeItem('loggedInUser');
-            localStorage.setItem('isLoggedIn', 'false');
+            localStorage.removeItem('isLoggedIn');
 
             // Elimino le recensioni associate all'utente
             var reviewKeys = Object.keys(localStorage).filter(key => key.endsWith('_reviews'));
@@ -69,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
 
-            // // Eliminare le note associate all'utente
+            // Elimino le note associate all'utente
             var noteKeys = Object.keys(localStorage).filter(key => key.endsWith('_note'));
             noteKeys.forEach(function (key) {
                 var emailInKey = key.split('_')[0];
@@ -79,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             // Elimino le ricette salvate associate all'utente
-            var savedRecipesKey = `${JSON.stringify(loggedInUser)}_savedRecipes`;
+            var savedRecipesKey = `${loggedInUser.email}_savedRecipes`;  // Corretto il nome della chiave
             if (localStorage.getItem(savedRecipesKey)) {
                 localStorage.removeItem(savedRecipesKey);
             }

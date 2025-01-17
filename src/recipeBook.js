@@ -86,17 +86,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function () {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
-    const loggedInUser = localStorage.getItem('loggedInUser');
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser')); // JSON.parse per ottenere l'oggetto utente
     
-    if (isLoggedIn !== 'true' || !loggedInUser) {
+    // Controllo se l'utente è loggato e se l'oggetto loggedInUser esiste
+    if (isLoggedIn !== 'true' || !loggedInUser || !loggedInUser.email) {
         alert('You must be logged in to see your saved recipes.');
         window.location.href = 'login.html';  // Reindirizza alla pagina di login se non loggato
         return;
     }
 
     const savedRecipesContainer = document.getElementById('saved-recipes-container');
-    const savedRecipes = JSON.parse(localStorage.getItem(`${loggedInUser}_savedRecipes`)) || [];
+    // Recupera le ricette salvate usando l'email dell'utente come chiave
+    const savedRecipes = JSON.parse(localStorage.getItem(`${loggedInUser.email}_savedRecipes`)) || [];
 
+    // Se non ci sono ricette salvate, mostra un messaggio
     if (savedRecipes.length === 0) {
         savedRecipesContainer.innerHTML = '<p>You have not saved any recipes yet.</p>';
         return;
@@ -105,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Funzione per aggiornare il localStorage e rimuovere una ricetta dai preferiti
     function removeRecipeFromFavorites(recipeId) {
         const updatedRecipes = savedRecipes.filter(recipe => recipe.id !== recipeId);
-        localStorage.setItem(`${loggedInUser}_savedRecipes`, JSON.stringify(updatedRecipes));
+        localStorage.setItem(`${loggedInUser.email}_savedRecipes`, JSON.stringify(updatedRecipes));
         location.reload();  // Ricarica la pagina per aggiornare la lista delle ricette
     }
 

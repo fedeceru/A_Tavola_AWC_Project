@@ -11,6 +11,8 @@ body {
 .navbar {
     background-color: #20B2AA; /* Light sea green */
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    margin-top: 7px;
+    height: 160px;
 }
 .navbar-brand {
     display: flex;
