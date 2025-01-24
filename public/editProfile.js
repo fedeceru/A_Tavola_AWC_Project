@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             // Elimino le ricette salvate associate all'utente
-            var savedRecipesKey = `${loggedInUser.email}_savedRecipes`;  // Corretto il nome della chiave
+            var savedRecipesKey = `${loggedInUser.email}_savedRecipes`;  
             if (localStorage.getItem(savedRecipesKey)) {
                 localStorage.removeItem(savedRecipesKey);
             }
