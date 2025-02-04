@@ -140,7 +140,7 @@ function saveRecipe() {
 
     // Ottieni le ricette salvate dall'utente loggato
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-    const savedRecipesKey = `${loggedInUser.email}_savedRecipes`;  // Corretto l'uso delle variabili nel nome della chiave
+const savedRecipesKey = `${loggedInUser.email}_savedRecipes`;  
     const savedRecipes = JSON.parse(localStorage.getItem(savedRecipesKey)) || [];
 
     // Controlla se la ricetta è già stata salvata
